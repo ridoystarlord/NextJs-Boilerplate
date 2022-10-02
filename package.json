@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check-types": "tsc --pretty --noEmit",
-    "check-format": "prettier --check .",
-    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "type:check": "tsc --pretty --noEmit",
+    "check:format": "prettier --check .",
+    "lint:check": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
-    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
+    "test-all": "pnpm check:format && pnpm lint:check && pnpm type:check && npm run build",
     "prepare": "husky install"
   },
   "dependencies": {
