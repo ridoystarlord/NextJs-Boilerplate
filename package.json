@@ -7,12 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type:check": "tsc --pretty --noEmit",
-    "check:format": "prettier --check .",
-    "lint:check": "eslint . --ext ts --ext tsx --ext js",
-    "format": "prettier --write .",
-    "test-all": "pnpm check:format && pnpm lint:check && pnpm type:check && npm run build",
-    "prepare": "husky install"
+    "lint-fix": "next lint --fix",
+    "prepare": "husky install",
+    "type:check": "tsc --noEmit"
   },
   "dependencies": {
     "axios": "^0.27.2",
